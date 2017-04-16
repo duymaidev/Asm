@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Thêm</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<center>
+		<h1>Thêm Trường Học</h1>
+		<form name="isEP" method="post" action="/them">
+			<table>
+				<tr>
+					<td>ID</td>
+					<td><input type="text" name="field1" id="f1"></td>
+				</tr>
+				<tr>
+					<td>Tên</td>
+					<td><input type="text" name="field2"  id="f2"></td>
+				</tr>
+				<tr>
+					<td>Giới Tính</td>
+					<td><input type="text" name="field3"  id="f3"></td>
+				</tr>
+				<tr>
+					<td>Năm Sinh</td>
+					<td><input type="text" name="field4"  id="f4"></td>
+				</tr>
+				<tr>
+					<td>Lớp</td>
+					<td><input type="text" name="field5"  id="f5"></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Add" onclick="return checkError()"></td>
+					
+				</tr>
+			</table>
+			
+			
+			
+		</form>
+		</center>
+		
+		<script>
+			function checkError(){
+				var id = document.getElementById("f1").value;
+				var name = document.getElementById("f2").value;
+				var gender = document.getElementById("f3").value;
+				var dob = document.getElementById("f4").value;
+				var classSv = document.getElementById("f5").value;
+					
+					if(id == ""){
+						alert("ChÆ°a nháº­p ID");
+						return false;
+					}else if(name ==""){
+						alert("ChÆ°a nháº­p Name");
+						return false;
+					}else if(gender ==""){
+						alert("ChÆ°a nháº­p Gender "+ "nam/nu");
+						return false;				
+					}else if(dob ==""){
+						alert("ChÆ°a nháº­p dob");
+						return false;
+					}else if(classSv ==""){
+						alert("ChÆ°a nháº­p Class");
+						return false;
+					}else{
+						alert("Insert Success");
+						return true
+					}
+				
+			}
+		</script>
+	</body>
+</html>
